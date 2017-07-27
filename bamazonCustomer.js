@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
     user: 'root',
 	//Your Password
     password: 'Jmota05!',
-	database: 'bamazon', 
+	database: 'Bamazon', 
 });
 
 var productBought = [];
@@ -93,23 +93,23 @@ var purchase = function(){
 					console.log(colors.bgWhite(res[0].ProductName + ' ' + res[0].Price));
 
 					//var totalSale displays total of bought items. 
-					var totalSale = colors.bgWhite(res[0].Price * productBought[0].Quantity);
+					var SaleTotal = colors.bgWhite(res[0].Price * productBought[0].Quantity);
+                    
+                    console.log(SaleTotal);
 
 					//connect to database Departments and update totalSale for id of item. 
-					connection.query("UPDATE Departments SET TotalSales = ? WHERE DepartmentName = ?;", [totalSale, res[0].DepartmentName], function(err, resultOne){
+					connection.query('UPDATE Departments SET TotalSales = ? WHERE DepartmentName = ?;', [SaleTotal, res[0].DepartmentName], function(err, resultOne){
 						if(err) console.log('error: ' + err);
 						return resultOne;
 					})
 
-					console.log('Total: ' + totalSale);
+					console.log('Total: ' + SaleTotal);
 
 					//this variable contains the newly updated stock quantity of the item purchased
 					newQuantity = res[0].StockQuantity - productBought[0].Quantity;
 			
 					// Updating products bought
 					connection.query("UPDATE STOCK SET StockQuantity = " + newQuantity +" WHERE ItemID = " + productBought[0].itemID, function(err, res){
-						// if(err) throw err;
-						// console.log('Problem ', err);
 						console.log('');
 						console.log(colors.cyan('Your order has been processed.  Thank you for shopping with us..'));
 						console.log('');

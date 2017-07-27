@@ -158,7 +158,8 @@ var addInventory = function(){
 
 			if(err) console.log('error '+ err);
 
-			// this selects  new updated info from database then console.log the updated amount
+			// this selects new updated info from database then console.log the updated amount
+            
 			connection.query("SELECT * FROM STOCK WHERE ItemID = ?", UpdateStock[0].inventoryID, function(error, resOne){
 				console.log('');
 				console.log('The new updated stock quantity for id# '+UpdateStock[0].inventoryID+ ' is ' + resOne[0].StockQuantity);
@@ -171,7 +172,7 @@ var addInventory = function(){
 };
 
 //creates the function for the last option above
-var addNewItem = function(){
+var addNewProduct = function(){
 	//creates the variable newItem which holds the questions that are asked
 	var newItem = {
 		properties: {
@@ -186,7 +187,7 @@ var addNewItem = function(){
 	prompt.start();
 
 	//gets the responses for the prompt above
-	prompt.get(newProduct, function(err, res){
+	prompt.get(newItem, function(err, res){
 
 		//creates a variable for the responses to be logged to
 		var ItemNew = {
@@ -201,7 +202,7 @@ var addNewItem = function(){
 //---------------------------------------------------------------------------
         
 		//pushes the variable and the response to addedProduct array at the top of page
-		addedProduct.push(newItem);
+		addedProduct.push(ItemNew);
 
 		//connects and inserts the prompt responses into the database to create the new item
 		connection.query('INSERT INTO STOCK (ItemID, ProductName, DepartmentName, Price, StockQuantity) VALUES (?, ?, ?, ?, ?);', [addedProduct[0].newIdNum, addedProduct[0].newItemName, addedProduct[0].newItemDepartment, addedProduct[0].newItemPrice, addedProduct[0].newStockQuantity], function(err, result){
