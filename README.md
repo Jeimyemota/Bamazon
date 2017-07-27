@@ -1,10 +1,11 @@
 # Bamazon
 
-Bamazon is a node app using MySQL and node.js to create online department store. Users can buy items or view stock, restock, or view low stock depending whether theyíre in customer mode or manager mode. 
+Bamazon is a node app using MySQL and node.js to create online department store. Users can buy items or view stock, restock, or view low stock depending whether they‚Äôre in customer mode or manager mode. 
 
 					Customer Mode
 
-The user can browse through items listed on a table and purchase them by inserting the itemís unique Id number. 
+The user can browse through items listed on a table and purchase them by inserting the item‚Äôs unique Id number. 
+https://user-images.githubusercontent.com/26091374/28653169-0c368334-725a-11e7-8f64-d82051a58935.png
 
 
 
@@ -26,7 +27,7 @@ The user can browse through items listed on a table and purchase them by inserti
 
 
 
-Once they have done that, the app will prompt how much they would like to purchase then spit out the ìreceiptî stating how many were bought, the item name, and the total cost. The app goes on to prompting a ìThank you for shopping with usî quote. 
+Once they have done that, the app will prompt how much they would like to purchase then spit out the ‚Äúreceipt‚Äù stating how many were bought, the item name, and the total cost. The app goes on to prompting a ‚ÄúThank you for shopping with us‚Äù quote. 
 
 
 				  Manager Mode
