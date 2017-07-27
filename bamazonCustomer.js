@@ -29,7 +29,7 @@ connection.query('SELECT ItemID, ProductName, Price FROM STOCK', function(err, r
 	var table = new Table({
 		head: ['Item Id#', 'Product Name', 'Price'],
 		style: {
-			head: ['cyan'],
+			head: ['green'],
 			compact: false,
 			colAligns: ['center'],
 		}

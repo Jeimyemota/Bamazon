@@ -70,7 +70,7 @@ var viewProducts = function(){
 		var table = new Table({
 			head: ['Item Id#', 'Product Name', 'Department Name', 'Price', 'Stock Quantity'],
 			style: {
-				head: ['blue'],
+				head: ['green'],
 				compact: false,
 				colAligns: ['center'],
 			}
