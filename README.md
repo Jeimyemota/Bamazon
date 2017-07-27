@@ -5,29 +5,13 @@ Bamazon is a node app using MySQL and node.js to create online department store.
 					Customer Mode
 
 The user can browse through items listed on a table and purchase them by inserting the item’s unique Id number. 
-https://user-images.githubusercontent.com/26091374/28653169-0c368334-725a-11e7-8f64-d82051a58935.png
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="494" alt="screenshot 71" src="https://user-images.githubusercontent.com/26091374/28653169-0c368334-725a-11e7-8f64-d82051a58935.png">
 
 
 
 Once they have done that, the app will prompt how much they would like to purchase then spit out the “receipt” stating how many were bought, the item name, and the total cost. The app goes on to prompting a “Thank you for shopping with us” quote. 
+<img width="541" alt="screenshot 72" src="https://user-images.githubusercontent.com/26091374/28653272-aa4df386-725a-11e7-9570-4be29df0f5e2.png">
+
 
 
 				  Manager Mode
@@ -39,6 +23,7 @@ Manager Mode allows the user to choose between four options:
 * Add to Inventory
 * Add New Product
 
+<img width="870" alt="screenshot 73" src="https://user-images.githubusercontent.com/26091374/28653291-c6829be2-725a-11e7-915d-b9d4c6a4b84f.png">
 
 
 
