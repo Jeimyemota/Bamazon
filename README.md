@@ -47,13 +47,8 @@ Option 4: Allows user to add a new item to inventory.
 
 
 				    Technologies Used
--Javascript
--Node.js
--MySql
+Javascript, Node.js, MySql.
 
-Npm Packages:
--Cli-table
--Colors/safe
--Prompt
+Npm Packages: Cli-table, Colors/safe, Prompt.
 
 
